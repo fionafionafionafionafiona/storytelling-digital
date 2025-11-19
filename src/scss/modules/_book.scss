@@ -24,9 +24,37 @@
   list-style: none;
 }
 
+.book-hidden-info-btn {
+  display: flex;
+  justify-content: start;
+  gap: 11px;
+  color: var(--white);
+  font-family: "Outfit", sans-serif;
+  font-size: 15px;
+  font-weight: 200;
+  background: none;
+  border: none;
+
+  &.see-more-btn {
+    display: flex;
+
+    &.is-hidden {
+      display: none;
+    }
+  }
+
+  &.see-less-btn {
+    display: none;
+
+    &.is-active {
+      display: flex;
+    }
+  }
+}
+
 .book-details {
   display: none;
-  &.book-hidden-info-btn.is-active {
+  &.is-open {
     display: flex;
     flex-direction: column;
     gap: 11px;

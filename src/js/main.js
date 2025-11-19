@@ -52,14 +52,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const politicsCta = document.querySelector(".politics-cta");
-  const parentsImgDefault = document.querySelector(".my-parents-default");
-  const parentsImgAfter = document.querySelector(".my-parents-after");
+  const seeMoreBtn = document.querySelector(".see-more-btn");
+  const seeLessBtn = document.querySelector(".see-less-btn");
+  const bookDetails = document.querySelector(".book-details");
 
-  if (politicsCta) {
-    politicsCta.addEventListener("click", () => {
-      parentsImgDefault.classList.toggle("is-hidden");
-      parentsImgAfter.classList.toggle("is-active");
+  if (seeMoreBtn && seeLessBtn && bookDetails) {
+    seeMoreBtn.addEventListener("click", () => {
+      seeMoreBtn.classList.add("is-hidden");
+      seeLessBtn.classList.add("is-active");
+      bookDetails.classList.add("is-open");
+    });
+
+    seeLessBtn.addEventListener("click", () => {
+      seeLessBtn.classList.remove("is-active");
+      seeMoreBtn.classList.remove("is-hidden");
+      bookDetails.classList.remove("is-open");
     });
   }
 });
