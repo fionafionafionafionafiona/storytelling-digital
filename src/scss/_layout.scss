@@ -3,3 +3,79 @@
   --white: #fff;
   --red: #870327;
 }
+
+.btn {
+  font-family: "Fake Nice", sans-Serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--black);
+}
+.buy-btn {
+  opacity: 0.5;
+  padding: 16px 74px;
+  color: var(--white);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.buy-now-btn {
+  padding: 16px 74px;
+  color: var(--red);
+  text-decoration-line: underline;
+  text-decoration-thickness: 5%;
+}
+
+.cta-btn {
+  border-radius: 34px;
+  border: 3px solid var(--red);
+  color: var(--red);
+  background: var(--white);
+  width: max-content;
+  height: max-content;
+  padding: 16px 75px;
+  transition: 0.3s;
+}
+.cta-btn:hover {
+  border-radius: 80px;
+  color: var(--white);
+  background: var(--red);
+}
+
+.buy-btn-dark {
+  color: var(--black);
+}
+
+.home-btn {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  opacity: 0.5;
+  padding: 16px 74px;
+}
+
+.buy-book-btn {
+  font-size: 64px;
+  transition: 0.4s;
+  transform-origin: left;
+}
+.buy-book-btn:hover {
+  scale: 110%;
+  text-decoration: underline solid 5%;
+}
+
+.book-hidden-info-btn {
+  gap: 11px;
+  color: var(--white);
+  font-family: "Outfit", sans-serif;
+  font-size: 15px;
+  font-weight: 200;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: start;
+}
+
+.is-hidden {
+  display: none !important;
+}

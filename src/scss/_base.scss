@@ -12,3 +12,38 @@ img,
 video {
   display: block;
 }
+
+@font-face {
+  font-family: "fake nice";
+  src: url("/fonts/fake-nice.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Persepolis";
+  src: url("/fonts/itc-zapf-chancery-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Persepolis";
+  src: url("/fonts/itc-zapf-chancery-bold.woff2") format("woff2");
+  font-weight: 700;
+}
+
+h2 {
+  color: var(--white);
+  font-family: "Persepolis";
+  font-size: 128px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+h3 {
+  color: var(--white);
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+  font-size: 60px;
+  font-weight: 900;
+  text-transform: uppercase;
+}

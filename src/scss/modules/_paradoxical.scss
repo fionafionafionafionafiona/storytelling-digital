@@ -1,0 +1,43 @@
+.paradoxical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  .paradoxical-speech-bubble {
+    padding: 149px 152px 0;
+    width: 100%;
+  }
+  .paradoxical-choices {
+    padding: 320px 71px 0 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.paradoxical-btn {
+  background-color: var(--red);
+  color: var(--white);
+  padding: 7px 45px;
+  border-radius: 34px;
+}
+
+.paradoxical-black-bg {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  height: 100vh;
+  width: 51vw;
+  background-color: var(--black);
+}
+
+img.paradoxical-marjane {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  width: 50%;
+}

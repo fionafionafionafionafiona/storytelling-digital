@@ -1,0 +1,135 @@
+.politics {
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--black);
+}
+.politics-images {
+  display: inline-flex;
+  position: relative;
+  width: 100%;
+
+  :nth-child(1) {
+    position: absolute;
+    top: 20%;
+    left: 8%;
+    img {
+      position: static;
+      width: 1002px;
+    }
+  }
+  :nth-child(2) {
+    position: absolute;
+    top: 32%;
+    left: 95%;
+    img {
+      width: 537px;
+    }
+  }
+
+  :nth-child(3) {
+    position: absolute;
+    top: 11%;
+    left: 137%;
+    img {
+      width: 576px;
+    }
+  }
+  :nth-child(4) {
+    position: absolute;
+    top: 23%;
+    left: 185%;
+    img {
+      width: 1161px;
+    }
+  }
+  :nth-child(5) {
+    position: absolute;
+    top: 12%;
+    left: 277%;
+    img {
+      width: 455px;
+    }
+  }
+  :nth-child(6) {
+    position: absolute;
+    top: 25%;
+    left: 320%;
+    img {
+      width: 273px;
+    }
+  }
+  :nth-child(7) {
+    position: absolute;
+    top: 42%;
+    left: 353%;
+    img {
+      width: 292px;
+    }
+  }
+  :nth-child(8) {
+    position: absolute;
+    top: 9%;
+    left: 387%;
+    img {
+      width: 292px;
+    }
+  }
+  :nth-child(9) {
+    position: absolute;
+    top: 40%;
+    left: 422%;
+    img {
+      width: 281px;
+    }
+  }
+  :nth-child(10) {
+    position: absolute;
+    top: 0;
+    left: 455%;
+    img {
+      width: 836px;
+    }
+  }
+}
+
+.politics-img-btn {
+  position: relative !important;
+  button {
+    position: absolute;
+    bottom: -13%;
+    right: 4%;
+    top: unset !important;
+    left: unset !important;
+  }
+  .my-parents-after {
+    display: none;
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
+.politics-towards-religion-content {
+  position: relative;
+  background-color: var(--white);
+  height: 100vh;
+  width: 90vw;
+  :nth-child(1) {
+    position: absolute !important;
+    top: 15%;
+    left: 15%;
+  }
+  :nth-child(2) {
+    position: absolute;
+    top: 73%;
+    left: 21%;
+  }
+  :nth-child(3) {
+    position: absolute;
+    top: 86%;
+    left: 60%;
+  }
+}

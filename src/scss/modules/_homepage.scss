@@ -1,0 +1,53 @@
+.homepage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--black);
+  align-items: center;
+  justify-content: center;
+
+  .homepage-marjane {
+    height: 500px;
+    width: 370px;
+    position: relative;
+  }
+  .homepage-marjane-hand-down {
+    position: absolute;
+    top: 0;
+  }
+  .homepage-marjane-hand-up {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  .homepage-speech-bubble {
+    position: absolute;
+    top: -30%;
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  .homepage-marjane:hover {
+    .homepage-speech-bubble {
+      opacity: 1;
+    }
+    .homepage-marjane-hand-down {
+      opacity: 0;
+    }
+    .homepage-marjane-hand-up {
+      opacity: 1;
+    }
+  }
+
+  .homepage-button {
+    transition: 0.3s;
+    position: absolute;
+    top: 57%;
+    left: 57%;
+  }
+  .homepage-button:hover {
+    transform: rotate(-15deg);
+  }
+}
