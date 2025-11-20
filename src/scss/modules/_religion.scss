@@ -116,6 +116,10 @@
   }
 }
 
-// .religion-revolution-images {
-//   position: relative;
-// }
+.the-first-one-after {
+  opacity: 0;
+  transition: 0.3s;
+}
+.the-first-one-after:hover {
+  opacity: 1;
+}

@@ -106,10 +106,18 @@
   }
   .my-parents-after {
     display: none;
+
     &.is-active {
       display: block;
     }
   }
+}
+
+.politics-army {
+  cursor: url("/img/politics/bullet.png?as=webp"), auto;
+}
+.politics-people {
+  cursor: url("/img/politics/rock.png?as=webp"), auto;
 }
 
 .politics-towards-religion-content {

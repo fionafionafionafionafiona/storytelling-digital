@@ -3,13 +3,45 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.querySelector(".loading-page")) {
+    document.querySelector(".loading-page").remove();
+  }
+
+  //Timeline présentation
+  const tlIntroduction = gsap.timeline({
+    delay: 1,
+    repeat: -1,
+    repeatDelay: 2,
+  });
+  tlIntroduction.to(".presentation-marjane-open-eye", {
+    opacity: 0,
+    duration: 0.1,
+  });
+  tlIntroduction.to(
+    ".presentation-marjane-closed-eye",
+    { opacity: 1, duration: 0.1 },
+    "<"
+  );
+  tlIntroduction.to({}, { duration: 0.4 });
+
+  tlIntroduction.to(".presentation-marjane-closed-eye", {
+    opacity: 0,
+    duration: 0.1,
+  });
+  tlIntroduction.to(
+    ".presentation-marjane-open-eye",
+    { opacity: 1, duration: 0.1 },
+    "<"
+  );
+
+  //Scrolls horizontaux
   gsap.to(".religion-images", {
     scrollTrigger: {
       trigger: ".religion",
       start: "top top",
       pin: true,
-      scrub: true,
+      scrub: 2,
       markers: false,
     },
     x: "-265%",
@@ -21,13 +53,14 @@ document.addEventListener("DOMContentLoaded", () => {
       trigger: ".politics",
       start: "top top",
       pin: true,
-      scrub: true,
+      scrub: 2,
       markers: false,
     },
     x: "-435%",
     ease: "sine.inOut",
   });
 
+  //CTAs changement de contenu
   const religionCta = document.querySelector(".religion-cta");
   const prophetImgDefault = document.querySelector(
     ".wanted-to-be-prophet-default"

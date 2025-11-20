@@ -14,18 +14,23 @@
   }
   .homepage-marjane-hand-down {
     position: absolute;
-    top: 0;
+    top: 20%;
+    left: 20%;
+    max-width: 50%;
   }
   .homepage-marjane-hand-up {
     position: absolute;
-    top: 0;
+    top: 20%;
+    left: 20%;
     opacity: 0;
     transition: 0.3s;
+    max-width: 50%;
   }
   .homepage-speech-bubble {
     position: absolute;
-    top: -30%;
+    top: -10%;
     opacity: 0;
+    width: 392px;
     transition: 0.3s;
   }
 

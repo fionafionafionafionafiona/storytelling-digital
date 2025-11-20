@@ -7,6 +7,21 @@
   --text-font-weight: 300;
 }
 
+.loading-page {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: var(--text-font-family);
+  font-weight: var(--text-font-weight);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+}
+
 .btn {
   font-family: "Fake Nice", sans-Serif;
   font-size: 40px;

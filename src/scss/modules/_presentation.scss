@@ -21,14 +21,27 @@
   width: 100vw;
   height: 100vh;
   position: relative;
+
   .presentation-speech-bubble {
     padding-top: 140px;
     position: absolute;
-    left: 15%;
+    left: 10%;
     top: -20%;
+    width: 30%;
+    transition: 0.3s;
   }
-  .presentation-marjane-open-eye {
-    position: absolute;
-    bottom: 0;
+  .presentation-speech-bubble:hover {
+    transform: rotate(-10deg);
   }
+}
+
+.presentation-marjane-open-eye,
+.presentation-marjane-closed-eye {
+  position: absolute;
+  bottom: -7;
+  width: 13%;
+}
+
+.presentation-marjane-closed-eye {
+  opacity: 0;
 }
