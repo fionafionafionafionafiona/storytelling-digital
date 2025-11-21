@@ -3,11 +3,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-document.addEventListener("DOMContentLoaded", function () {
-  if (document.querySelector(".loading-page")) {
-    document.querySelector(".loading-page").remove();
+window.addEventListener("load", function () {
+  const loadingPage = document.querySelector(".loading-page");
+  if (loadingPage) {
+    setTimeout(() => loadingPage.remove(), 1500);
   }
-
   //Timeline présentation
   const tlIntroduction = gsap.timeline({
     delay: 1,
@@ -102,4 +102,67 @@ document.addEventListener("DOMContentLoaded", function () {
       bookDetails.classList.remove("is-open");
     });
   }
+
+  //Videos en hover
+  const religionBtn = document.querySelector(".religion-btn");
+  const politicsBtn = document.querySelector(".politics-btn");
+
+  const religionVideo = document.querySelector(".paradoxical-video-religion");
+  const politicsVideo = document.querySelector(".paradoxical-video-politics");
+
+  if (religionBtn && religionVideo) {
+    religionBtn.addEventListener("mouseenter", () => {
+      religionVideo.currentTime = 0; // recommence depuis le début
+      religionVideo.loop = true; // boucle infinie
+      religionVideo.play();
+    });
+
+    religionBtn.addEventListener("mouseleave", () => {
+      religionVideo.pause();
+      religionVideo.currentTime = 0; // remettre à zéro si besoin
+    });
+  }
+
+  if (politicsBtn && politicsVideo) {
+    politicsBtn.addEventListener("mouseenter", () => {
+      politicsVideo.currentTime = 0;
+      politicsVideo.loop = true;
+      politicsVideo.play();
+    });
+
+    politicsBtn.addEventListener("mouseleave", () => {
+      politicsVideo.pause();
+      politicsVideo.currentTime = 0;
+    });
+  }
+
+  //buy-book-btn animation
+  const buyBookBtnSpans = document.querySelectorAll(".buy-book-btn span");
+  buyBookBtnSpans.forEach((span, i) => {
+    span.style.animationDelay = `${i * 0.03}s`;
+  });
+
+  //Vitesse des scrolls horizantaux
+  const zones = document.querySelectorAll(".politics, .religion");
+
+  zones.forEach((zone) => {
+    let target = zone.scrollLeft;
+    let current = zone.scrollLeft;
+
+    zone.addEventListener(
+      "wheel",
+      (e) => {
+        e.preventDefault();
+        target += e.deltaY / 2;
+      },
+      { passive: false }
+    );
+
+    function smooth() {
+      current += (target - current) * 0.1;
+      zone.scrollLeft = current;
+      requestAnimationFrame(smooth);
+    }
+    smooth();
+  });
 });

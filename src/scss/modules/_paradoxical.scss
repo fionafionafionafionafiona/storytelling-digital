@@ -22,6 +22,10 @@
   color: var(--white);
   padding: 7px 45px;
   border-radius: 34px;
+  transition: 0.2s;
+}
+.paradoxical-btn:hover {
+  border-radius: 14px;
 }
 
 .paradoxical-black-bg {
@@ -31,13 +35,17 @@
   left: 0;
   z-index: -10;
   height: 100vh;
-  width: 51vw;
+  width: 51.4vw;
   background-color: var(--black);
 }
 
-img.paradoxical-marjane {
+video.paradoxical-marjane {
   position: absolute;
   bottom: 0;
   z-index: -1;
   width: 50%;
+}
+
+.paradoxical-video-religion {
+  left: 24.4%;
 }

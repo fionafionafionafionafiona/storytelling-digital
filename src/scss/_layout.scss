@@ -29,6 +29,7 @@
   text-decoration: none;
   color: var(--black);
 }
+
 .buy-btn {
   opacity: 0.5;
   padding: 16px 74px;
@@ -37,11 +38,17 @@
   bottom: 0;
   left: 0;
 }
+
 .buy-now-btn {
   padding: 16px 74px;
   color: var(--red);
   text-decoration-line: underline;
   text-decoration-thickness: 5%;
+  transition: 0.5s;
+}
+.buy-now-btn:hover {
+  text-decoration-style: dotted;
+  text-decoration-thickness: 13%;
 }
 
 .cta-btn {
@@ -73,13 +80,37 @@
 }
 
 .buy-book-btn {
+  display: inline-flex;
+  gap: 1px;
+  cursor: pointer;
+  overflow: hidden;
   font-size: 64px;
-  transition: 0.4s;
-  transform-origin: left;
+  line-height: 1;
 }
-.buy-book-btn:hover {
-  scale: 110%;
-  text-decoration: underline solid 5%;
+
+.buy-book-btn span {
+  display: inline-block;
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.15s;
+  will-change: transform, opacity;
+}
+
+.buy-book-btn:hover span {
+  opacity: 0;
+  transform: translateY(-6px);
+  animation: reveal 0.45s forwards;
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .is-hidden {
